@@ -17,3 +17,5 @@ Exec script - it will be at new user home directory
 Copy private key after installation, and save it at local directory ~/.ssh
 
 Relogin at your server
+
+New SSH port is 5499 => 
