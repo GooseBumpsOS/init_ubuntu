@@ -213,15 +213,12 @@ sudo update-locale LANG=ru_RU.UTF-8
 while true; do
     read -p "Нужен mysql? [y/n] " yn
     case $yn in
-        [Yy]* ) sudo apt update;sudo apt install mysql-server;sudo mysql_secure_installation; break;;
+        [Yy]* ) sudo apt update;sudo apt install mysql-server;sudo mysql_secure_installation; sudo add-apt-repository ppa:phpmyadmin/ppa;
+sudo apt install phpmyadmin php-mbstring php-gettext; break;;
         [Nn]* ) break;;
         * ) echo "Только y или n";;
     esac
 done
-
-
-sudo add-apt-repository ppa:phpmyadmin/ppa
-sudo apt install phpmyadmin php-mbstring php-gettext
 
 
 #####
