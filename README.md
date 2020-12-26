@@ -4,6 +4,7 @@ init new Ubuntu server script
 login at server as root
 
 chmod +x init_ubuntu.sh
+
 ./init USERNAME
 
 Follow screen instructions
