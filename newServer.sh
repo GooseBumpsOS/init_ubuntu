@@ -45,7 +45,7 @@ done
 
 sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install php7.4 php7.4-dev php7.4-xml php7.4-zip php7.4-gmp php7.4-cli php7.4-mbstring php7.4-json php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl git -y
 
 sudo apt install curl -y
@@ -63,10 +63,10 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
-sudo apt update 
+sudo apt update -y
 sudo apt upgrade -y
 
-sudo apt install apache2 
+sudo apt install apache2 -y
 
 
 #alias and env config
@@ -202,7 +202,7 @@ sudo update-alternatives --config editor
 
 
 #locale
-sudo apt install language-pack-ru 
+sudo apt install language-pack-ru -y
 sudo update-locale LANG=ru_RU.UTF-8
 #sudo dpkg-reconfigure locales
 #end locale
@@ -213,8 +213,8 @@ sudo update-locale LANG=ru_RU.UTF-8
 while true; do
     read -p "Нужен mysql? [y/n] " yn
     case $yn in
-        [Yy]* ) sudo apt update;sudo apt install mysql-server;sudo mysql_secure_installation; sudo add-apt-repository ppa:phpmyadmin/ppa;
-sudo apt install phpmyadmin php-mbstring php-gettext; break;;
+        [Yy]* ) sudo apt update -y;sudo apt install mysql-server -y;sudo mysql_secure_installation -y; sudo add-apt-repository ppa:phpmyadmin/ppa;
+sudo apt install phpmyadmin php-mbstring php-gettext -y; break;;
         [Nn]* ) break;;
         * ) echo "Только y или n";;
     esac
