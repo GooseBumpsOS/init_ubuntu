@@ -43,10 +43,9 @@ while true; do
     esac
 done
 
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update -y
-sudo apt-get install php7.4 php7.4-dev php7.4-xml php7.4-zip php7.4-gmp php7.4-cli php7.4-mbstring php7.4-json php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl git -y
+sudo apt install --no-install-recommends php8.1
+sudo apt-get install php8.1 php8.1-dev php8.1-xml php8.1-zip php8.1-gmp php8.1-cli php8.1-mbstring php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl git -y
+
 
 sudo apt install curl -y
 sudo apt install mc -y
